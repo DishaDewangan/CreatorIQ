@@ -11,7 +11,7 @@ import {
     SidebarMenuButton,
     SidebarMenuItem,
 } from "@/components/ui/sidebar"
-import { Calendar, Home, Inbox, Search, Settings } from "lucide-react"
+import { BookType, ChartNoAxesColumn, GalleryThumbnails, Gauge, Home, ImageIcon, Lightbulb, Settings, User2 } from "lucide-react"
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 
@@ -22,25 +22,44 @@ const items = [
         icon: Home,
     },
     {
-        title: "Inbox",
-        url: "#",
-        icon: Inbox,
-    },
-    {
-        title: "Calendar",
-        url: "#",
-        icon: Calendar,
-    },
-    {
-        title: "Search",
-        url: "#",
-        icon: Search,
-    },
-    {
-        title: "Settings",
-        url: "#",
-        icon: Settings,
-    },
+    title: "Thumbnail Generator",
+    url: "#",
+    icon: ImageIcon,
+  },
+  {
+    title: "Thumbnail Search",
+    url: "#",
+    icon: GalleryThumbnails,
+  },
+  {
+    title: "Keywords",
+    url: "#",
+    icon: BookType,
+  },
+  {
+    title: "Optimize",
+    url: "#",
+    icon: ChartNoAxesColumn,
+  },{
+  title: "Outlier",
+  url: "#",
+  icon: Gauge,
+},
+{
+  title: "AI Content Generator",
+  url: "#",
+  icon: Lightbulb,
+},{
+  title: "Billing",
+  url: "#",
+  icon: Settings,
+},
+{
+  title: "Profile",
+  url: "#",
+  icon: User2,
+}
+
 ]
 
 export function AppSidebar() {
@@ -49,9 +68,9 @@ export function AppSidebar() {
         <Sidebar>
             <SidebarHeader>
                 <div className='p-4'>
-                    <Image src={'./logo.svg'} alt='logo' width={100} height={100}
-                        className='w-full h-full' />
-                    <h2 className='text-sm text-gray-400 text-center'>Build Awesome</h2>
+                 <Image src={'/logo2.png'} alt='logo' width={100} height={100}
+  className='w-full h-full' />
+
                 </div>
             </SidebarHeader>
             <SidebarContent>
